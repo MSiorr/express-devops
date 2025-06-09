@@ -1,1 +1,16 @@
+# .github/workflows/simple-test.yml
 
+name: Prosty Test Workflow
+
+on:
+  push:
+    branches:
+      - ino_dev
+  workflow_dispatch:
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wypisz powitanie
+        run: echo "🎉 Workflow dla gałęzi ino_dev został pomyślnie uruchomiony!"
